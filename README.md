@@ -136,13 +136,13 @@ You can manually test by trying:
 ## 📸 Screenshots
 
 ### **1. Program Start (Main Menu)**
-![Program Start](data/images/Program%20Start.png)
+![Program Start](images/Program%20Start.png)
 
 ### **2. Account Details Saved Display**
-![Details Saved Display](data/images/Details%20Saved%20Display.png)
+![Details Saved Display](images/Details%20Saved%20Display.png)
 
 ### **3. Data Stored in JSON Format**
-![Data in JSON](data/images/data%20in%20JSON%20format.png)
+![Data in JSON](images/data%20in%20JSON%20format.png)
 
 ---
 
