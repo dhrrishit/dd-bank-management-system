@@ -1,66 +1,69 @@
-# DD Bank – Command-Line Bank Management System
+# 🏦 DD Bank – Command-Line Bank Management System (Python + JSON)
 
-DD Bank is a simple, command-line based bank management system built in Python.  
-It allows a user to create and manage a single bank account at a time using a JSON file as lightweight storage.
+DD Bank is a simple and fully functional **command-line based Bank Management System** developed using Python. It allows users to create and manage bank accounts with features like deposit, withdrawal, updating details, viewing details, and deleting accounts. All data is stored in a **JSON file**, making the project lightweight, portable, and easy to maintain.
 
 ---
 
-## 🧾 Project Overview
+## 📌 Overview
 
-The goal of this project is to simulate the core operations of a bank account in a minimal but structured way:
+This project simulates the core banking operations in a simple CLI environment. It was developed as part of VIT Bhopal’s **Build Your Own Project (BYOP)** requirement.
 
-- Create a new bank account
-- Deposit money
-- Withdraw money
-- View account details
-- Update account details
-- Delete an account
+The project includes:
 
-All the data is stored in a local JSON file, which acts as a tiny database.
+* Proper folder structure
+* Multiple functional modules
+* JSON-based data storage
+* User authentication using Account Number + PIN
+* Error handling & validation
+* Complete documentation
 
 ---
 
 ## ✨ Features
 
-1. **Account Creation**
-   - Name, age, email, phone number, address, pincode
-   - Auto-generated 9-digit account number
-   - User-defined 6-digit PIN (validated)
-   - Age restriction: minimum 18 years
+### **1. Create Bank Account**
 
-2. **Deposit Money**
-   - Validates account number + PIN
-   - Minimum deposit amount: ₹500
-   - Balance updated in JSON storage
+* Collects user details (Name, Age, Email, Phone, Address, Pincode)
+* Generates a unique **9-digit account number** automatically
+* Requires a **valid 6-digit PIN**
+* Ensures user age is **18+**
 
-3. **Withdraw Money**
-   - Validates account number + PIN
-   - Maximum withdrawal amount: ₹20,000 per transaction
-   - Checks for sufficient balance before withdrawal
+### **2. Deposit Money**
 
-4. **View Account Details**
-   - View all stored details including balance
-   - Requires valid account number and PIN
+* Authenticates using Account Number + PIN
+* Minimum deposit: **₹500**
+* Updates balance in the JSON file
 
-5. **Update Account Details**
-   - Updatable fields: Name, Email, Phone Number, Address, Pincode, Account PIN
-   - Non-updatable: Age, Account Number, Balance (for integrity)
-   - Empty input keeps old value
+### **3. Withdraw Money**
 
-6. **Delete Account**
-   - Validates account number + PIN
-   - Asks for delete confirmation
-   - Permanently removes account from the JSON file
+* Authenticates user
+* Maximum withdrawal per transaction: **₹20,000**
+* Ensures sufficient balance
+
+### **4. View Account Details**
+
+* Shows all stored information
+* Requires correct credentials
+
+### **5. Update Account Details**
+
+* Editable fields: Name, Email, Phone, Address, Pincode, PIN
+* Non-editable: Age, Account Number, Balance
+* Empty inputs keep old values
+
+### **6. Delete Account**
+
+* Requires authentication
+* Asks for confirmation before permanent deletion
 
 ---
 
-## 🏗️ Technologies & Tools Used
+## 🏗️ Technologies Used
 
-- **Language:** Python 3
-- **Standard Libraries:** `json`, `random`, `pathlib`
-- **Storage:** Local JSON file (`data.json`)
-- **Environment:** Any machine with Python 3 installed
-- **Version Control:** Git + GitHub
+* **Python 3**
+* **JSON** for data storage
+* **pathlib**, **json**, **random** modules
+* **Git / GitHub** for version control
 
 ---
 
@@ -69,10 +72,86 @@ All the data is stored in a local JSON file, which acts as a tiny database.
 ```text
 dd-bank-management-system/
 ├── src/
-│   └── bank_management.py      # Main application logic and menu
+│   └── bank_management.py
 ├── data/
-│   └── data.json               # JSON storage for bank accounts
-├── README.md                   # Project overview and usage instructions
-├── statement.md                # Problem statement & scope
+│   └── data.json
+├── README.md
+├── statement.md
 └── report/
-    └── DD_Bank_Project_Report.md   # Detailed report (exported as PDF for submission)
+    └── DD_Bank_Project_Report.pdf (to be uploaded separately)
+```
+
+---
+
+## ⚙️ Installation & Running the Project
+
+### **1. Clone the Repository**
+
+```bash
+git clone https://github.com/dhrrishit/dd-bank-management-system.git
+cd dd-bank-management-system
+```
+
+### **2. Ensure Python Is Installed**
+
+```bash
+python --version
+```
+
+Python 3.x is required.
+
+### **3. Run the Program**
+
+```bash
+cd src
+python bank_management.py
+```
+
+You will see a menu like:
+
+```text
+Press 1 to create a DD Bank account
+Press 2 to deposit an amount
+Press 3 to withdraw money
+Press 4 to view account details
+Press 5 to update your details
+Press 6 to delete your account
+Press 7 to exit
+```
+
+---
+
+## 🧪 Testing Instructions
+
+You can manually test by trying:
+
+* Creating an account with valid & invalid inputs
+* Depositing below ₹500
+* Withdrawing above balance
+* Updating only one field
+* Deleting an account & verifying deletion
+
+---
+
+## 📸 Screenshots
+
+### **1. Program Start (Main Menu)**
+![Program Start](data/images/Program%20Start.png)
+
+### **2. Account Details Saved Display**
+![Details Saved Display](data/images/Details%20Saved%20Display.png)
+
+### **3. Data Stored in JSON Format**
+![Data in JSON](data/images/data%20in%20JSON%20format.png)
+
+---
+
+## 👤 Author
+
+**Name:** Dhrrishit V. Deka
+
+---
+
+## 📄 License
+
+This project is for academic and learning purposes.
